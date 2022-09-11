@@ -5,7 +5,7 @@
   </div>
 
   <div>
-    <%= form.label :title %><br>
+    <%= form.label :titulo %><br>
     <%= form.text_field :title %>
     <% article.errors.full_messages_for(:title).each do |message| %>
       <div><%= message %></div>
@@ -13,7 +13,7 @@
   </div>
 
   <div>
-    <%= form.label :body %><br>
+    <%= form.label :comentário %><br>
     <%= form.text_area :body %><br>
     <% article.errors.full_messages_for(:body).each do |message| %>
       <div><%= message %></div>
@@ -21,6 +21,6 @@
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit :Criar_artigo %>
   </div>
 <% end %>

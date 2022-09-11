@@ -1,4 +1,16 @@
-<center><h1>Articles</h1></center>
+<center><h1>Artigos</h1></center>
+
+<% if user_signed_in? %>
+<ul>
+<li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
+</ul>
+<% else %>
+<ul>
+<li><%= link_to "Login", user_session_path%></li>
+<li><%= link_to "Cadastro de novo usuério", new_user_registration_path %></li>
+</ul>
+<% end %>
+
 
 <ul>
   <% @articles.each do |article| %>
@@ -10,4 +22,4 @@
   <% end %>
 </ul>
 
-<%= link_to "New Article", new_article_path %>
+<%= link_to "Novo artigo", new_article_path %>
